@@ -6,6 +6,12 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.preprocessing import LabelEncoder
 
+import os
+
+# Auto train if model doesn't exist
+if not os.path.exists('model.pkl'):
+    import train
+
 # ── Page Config ───────────────────────────────────────────────
 st.set_page_config(
     page_title="ChurnIQ | Customer Intelligence",
